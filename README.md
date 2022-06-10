@@ -73,3 +73,16 @@ para el endpoint es obligatoria la variable state, las demas no son obligatorias
 state(string)
 year(integer)
 city(string)
+
+
+
+Codigo para extender el modelo de base de datos para el modulo de like:
+
+CREATE TABLE like_history (
+    id int NOT NULL,
+    property_id int NOT NULL,
+    user_id int NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (property_id) REFERENCES property(id),
+    FOREIGN KEY (user_id) REFERENCES auth_user(id)
+);
