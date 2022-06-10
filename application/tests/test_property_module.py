@@ -29,5 +29,3 @@ class TestPropertyModule(TestCase):
         assert query_params.state in property_dto.PropertyStateFilter.PRE_SALE.value
         assert query_params.city
         assert not(query_params.year)
-
-

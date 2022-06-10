@@ -17,7 +17,8 @@ APPLICATION_JSON = "application/json"
 @property.route("/", methods=["GET"])
 def get_by_state():
     try:
-        query_params = _validate_query_params(request_query_params=request.args.to_dict())
+        query_params = _validate_query_params(
+            request_query_params=request.args.to_dict())
         properties = property_service.get_filtered_by_state_city_year(
             query_params=query_params)
 
@@ -32,6 +33,6 @@ def get_by_state():
         raise
 
 
-def _validate_query_params(request_query_params:Dict[str,Any])->RequestPropertyDto:
+def _validate_query_params(request_query_params: Dict[str, Any]) -> RequestPropertyDto:
 
     return RequestPropertyDto.parse_obj(request_query_params)
