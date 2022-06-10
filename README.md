@@ -74,7 +74,9 @@ state(string)
 year(integer)
 city(string)
 
-
+El modelo entidad relación se encuentra en el repositorio, archivo llamado:
+ER_Optimized.png
+https://github.com/tomdeveloper1991/habi-test-api-rest/blob/ec5fac036cf60763c6536186aa1b4022ffab1dfc/ER_Optimized.png
 
 Codigo para extender el modelo de base de datos para el modulo de like:
 
